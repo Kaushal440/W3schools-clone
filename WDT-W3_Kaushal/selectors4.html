@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            /* transition: all ease-in-out 0.5s; */
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+
+            font-style: normal;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .navtop {
+            height: 53px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .navtop>.left {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .navtop>.left>#links {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            margin-right: 10px;
+
+
+        }
+
+        .navtop>.left>#links>a {
+            all: unset;
+            padding: 20px 17px;
+            display: flex;
+
+        }
+
+        .navtop>.left>#links>a>span {
+            font-size: 20px;
+        }
+
+        .navtop>.left>#links>a:hover:not(.navtop>.left>#links) {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+      
+        #topSearch {
+            height: 35px;
+            border-radius: 50px;
+            border: 1px solid gray;
+            font-size: 13px;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        #topSearch>input {
+            all: unset;
+            font-size: 16px;
+            width: 100px;
+        }
+
+        #topSearch>span {
+            margin-right: 10px;
+        }
+
+
+        .right {
+
+            justify-self: flex-end;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+
+        }
+
+        .right>a {
+
+            all: unset;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+
+            padding: 0px 6px;
+            gap: 10px;
+            border-radius: 50px;
+
+        }
+
+        .right>a>#svgpad {
+            margin: 8px 0px;
+        }
+
+        .right>a:hover {
+
+            background-color: rgb(241, 241, 241);
+        }
+
+        div#imglogo {
+            width: 60px;
+        }
+
+      
+        .pr {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #D9EEE1;
+            border-radius: 25px;
+            font-size: 18px;
+
+            height: 80%;
+        }
+
+        .pr {
+            background-color: transparent;
+            margin-right: 15px;
+        }
+
+        #signup {
+            position: relative;
+            right: -19px;
+            /* width: 100%; */
+            padding: 9px;
+            height: 100%;
+        }
+
+        #login {
+            padding: 9px;
+            padding-left: 20px;
+            height: 100%;
+
+        }
+
+        #signup {
+            background-color: #04AA6D;
+            border-radius: 25px;
+            z-index: 10;
+        }
+
+        #signup:hover {
+
+            background-color: rgb(2, 136, 2);
+        }
+
+        #login {
+            background-color: #D9EEE1;
+            /* Initial background color for login */
+        }
+
+        #login:hover {
+
+            background-color: rgb(2, 136, 2);
+            /* Hover background color for login */
+        }
+
+        #login:hover a {
+
+            color: white !important;
+        }
+
+        #signup a,
+        #login a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            height: 100%;
+            text-align: center;
+            margin-top: 2px;
+            padding: 0px 5px;
+        }
+
+        #signup a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        #login {
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        #first {
+            background-color: white;
+            height: 56px;
+        }
+
+        #secound {
+            height: 33px;
+            background-color: #282A35;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #left {
+            background-color: #E7E9EB;
+            height: calc(100vh - 89px);
+            width: 22vw;
+            font-size: medium;
+            /* overflow-y: scroll; */
+            overflow-x: hidden;
+        }
+
+        #topicname {
+            margin: 20px 0px 10px 15px;
+            font-size: 21px;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        #left>a {
+            all: unset;
+            display: block;
+            padding: 5px 40px 5px 30px;
+
+        }
+
+        #left>a:hover {
+            background-color: #cccccc;
+        }
+
+        /* #left>a.active {
+            background-color: #04AA6D;
+            color: white;
+        } */
+
+        h1 {
+            color: black;
+            font-size: 50px;
+            margin: 70px 0px 0px 0px;
+            font-weight: 200;
+        }
+
+        #mid {
+            padding: 20px;
+            width: 1200px;
+            border: 1px solid black;
+            overflow-x: hidden;
+        }
+
+       
+        #right {
+            border: 1px solid green;
+        }
+
+        #intro {
+            background-color: #d0ebe2;
+            width: 110%;
+            height: 280px;
+            position: relative;
+            left: -40px;
+            padding: 40px;
+            margin: 20px 0px;
+        }
+
+        p {
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 50px;
+        }
+
+        #frst>a {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav" style="border-bottom: 1px solid black;">
+
+        <nav id="first">
+            <div class="nav">
+                <div class="navtop">
+                    <div class="left">
+                        <div id="logoimg">
+                            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7walZHqtuksQQ4SUPHAlwLvUmL688mOJv3Q&s"
+                                alt="" style=" all: unset; padding: 5px; height: 40px; margin-left: 10px;"> -->
+                        </div>
+                        <div id="links">
+                            <a href="../sub/home 1.html">HTML<span class="material-symbols-outlined">arrow_drop_down</span></a>
+                            <a href="../homepage.html">CSS<span class="material-symbols-outlined">arrow_drop_down</span></a>
+                            <a href="">Certificates<span class="material-symbols-outlined">arrow_drop_down</span></a>
+                            <a href="">Services<span class="material-symbols-outlined">arrow_drop_down</span></a>
+                            <!-- <a href="">Menu<span class="material-symbols-outlined">arrow_drop_down</span></a> -->
+                        </div>
+                        <div id="topSearch">
+                            <input type="text" placeholder="Search..." class="Search">
+                            <span class="material-symbols-outlined" id="se">search</span>
+                        </div>
+                        <div class="pr">
+                            <div id="signup" style="margin-left: 450px;">
+
+                                <a href="" style="color: white;"> Sign Up</a>
+
+                            </div>
+                            <div id="login" class="l">
+
+                                <a href="" id="IDlog"> Log in</a>
+
+                            </div>
+                        </div>
+
+        </nav>
+
+
+    </div>
+    <div id="main">
+
+        <div id="left">
+            <h2 id="topicname">CSS Tutorial</h2>
+
+            <a href="index.html" class="active">CSS HOME</a>
+            <a href="introduction2.html">CSS INTRODUCTION</a>
+            <a href="syntax3.html">CSS SYNTAX </a>
+            <a href="selectors4.html"  style="background-color: #04AA6D; color: white;">CSS SELECTORS</a>
+            <a href="comments5.html">CSS COMMENTS</a>
+            <a href="color6.html">CSS COLORS</a>
+            <a href="background7.html">CSS BACKGROUND</a>
+            <a href="border8.html">CSS BORDER</a>
+            <a href="margins9.html">CSS MARGIN</a>
+            <a href="padding10.html">CSS PADDING</a>
+        </div>
+        <div id="mid">
+            <h1 id="heading">CSS Selectors</h1>
+            <br>
+            <hr>
+            <br>
+            <p>A CSS selector selects the HTML element(s) you want to style.</p>
+            <br>
+           <hr>
+           <br>
+           <div id="intro">
+                <h2>CSS Selectors</h2>
+                <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.
+                        <br>
+                    We can divide CSS selectors into five categories:</p>
+                    <ul>
+                    <li>Simple selectors (select elements based on name, id, class).</li>
+                        <ul>
+                            <li>ID= select an element with a specific id, write a hash (#) character, followed by the id of the element.</li>
+                            <li>CLASS= select elements with a specific class, write a period (.) character, followed by the class name.</li>
+                        </ul>
+                    </ul>
+                    <br>
+            </div>           
+
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
